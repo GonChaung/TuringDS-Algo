@@ -1,9 +1,7 @@
-package Sorting;
+package sorting;
 
 import org.junit.jupiter.api.Test;
-import sorting.BubbleSort;
-import sorting.SelectionSort;
-import sorting.Sortable;
+
 
 import java.util.Random;
 
@@ -11,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SortingTest {
-    Sortable algo;
     Random random = new Random();
     int[] getRandomArray(int n, int range){
         int[] arr = new int[n];
@@ -33,12 +30,11 @@ public class SortingTest {
             }
         } return true;
     }
-
     @Test
     public void selectionSortTest(){
-        /*assertEquals(true,isArraySorted(new int[]{4,5,6}));*/
+        assertEquals(true,isArraySorted(new int[]{4,5,6}));
         int[] arr = getRandomArray(10,100);
-        algo = new SelectionSort();
+        Sortable algo = new SelectionSort();
         algo.sort(arr);
     }
 
@@ -50,10 +46,17 @@ public class SortingTest {
     @Test
     public void bubbleSortTest(){
         int[] arr = getRandomArray(10,1000);
-        algo = new BubbleSort();
+        Sortable algo = new BubbleSort();
         algo.sort(arr);
         assertTrue(isArraySorted(arr));
     }
 
+    @Test
+    public void InsertionSort(){
+        int arr[] = getRandomArray(5,10);
+        InsertionSort algo = new InsertionSort();
+        algo.sort(arr);
+        assertTrue(Util.isArraySorted(arr));
+    }
 
 }
