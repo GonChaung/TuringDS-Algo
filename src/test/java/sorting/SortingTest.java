@@ -54,7 +54,7 @@ public class SortingTest {
     @Test
     public void InsertionSort(){
         int arr[] = getRandomArray(5,10);
-        InsertionSort algo = new InsertionSort();
+        Sortable algo = new InsertionSort();
         algo.sort(arr);
         assertTrue(Util.isArraySorted(arr));
     }
