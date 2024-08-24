@@ -19,7 +19,8 @@ public class SortingTest {
     }
 
     void print(int[] arr){
-        for(int i=0; i < arr.length; i++){
+        System.out.println("Original Array : ");
+        for (int i=0; i < arr.length; i++){
             System.out.print(arr[i] + ", ");
         }
     }
@@ -33,19 +34,21 @@ public class SortingTest {
     @Test
     public void selectionSortTest(){
         assertEquals(true,isArraySorted(new int[]{4,5,6}));
-        int[] arr = getRandomArray(10,100);
+        int[] arr = getRandomArray(10000,1000000);
+        // print(arr);
         Sortable algo = new SelectionSort();
         algo.sort(arr);
     }
 
-    @Test
+    /*@Test
     public void selectionSortTest1(){
         assertTrue(isArraySorted(new int[]{4, 5, 6}));
-    }
+    }*/
 
     @Test
     public void bubbleSortTest(){
-        int[] arr = getRandomArray(10,1000);
+        int[] arr = getRandomArray(10000,1000000);
+        //print(arr);
         Sortable algo = new BubbleSort();
         algo.sort(arr);
         assertTrue(isArraySorted(arr));
@@ -53,7 +56,8 @@ public class SortingTest {
 
     @Test
     public void InsertionSort(){
-        int arr[] = getRandomArray(5,10);
+        int[] arr = getRandomArray(10000,1000000);
+        //print(arr);
         Sortable algo = new InsertionSort();
         algo.sort(arr);
         assertTrue(Util.isArraySorted(arr));

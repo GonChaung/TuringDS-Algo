@@ -13,6 +13,7 @@ public class SelectionSort implements Sortable{
             int temp = arr[i];
             arr[i] = arr[midIndex];
             arr[midIndex] = temp;
+            Util.print(" Iteration " + i + " = ", arr);
         }
     }
 }

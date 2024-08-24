@@ -20,4 +20,5 @@ public class BinarySearch extends Array implements Searchable {
         }
         return -1;
     }
+
 }
