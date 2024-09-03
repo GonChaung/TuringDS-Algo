@@ -15,4 +15,18 @@ public class Solution {
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        Boolean ans = solution.isAnagram("zeed","deez");
+        System.out.println(ans);
+        /*String ok = "dekj";
+        String ko = "kjde";
+        int[] arr = new int[26];
+        for (int i=0; i < ok.length(); i++){
+            System.out.println(arr[ok.charAt(i) - 'a']++);
+            System.out.println(arr[ko.charAt(i) - 'a']--);
+        }*/
+
+    }
 }
