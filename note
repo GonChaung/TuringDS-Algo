@@ -1,3 +1,5 @@
 sql -> space comlexity
 fix size array -> items find trr mhr a sin pyay
 BubbleSort -> after the first loop, max num will be the last one.
+
+Binary Search Tree -> use InOrder -> will be already sort
